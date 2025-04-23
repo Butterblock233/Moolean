@@ -1,0 +1,10 @@
+[project]
+name = "Moolean"
+version = "0.1.0"
+description = "A ultra-slow calculator written in Python"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "debugpy>=1.8.14",
+    "pyparsing>=3.2.3",
+]

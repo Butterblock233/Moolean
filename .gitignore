@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.python-version
+
+# PyCharm
+.idea/
+
+# vscode 
+.vscode
+.vscode-test
+
+# git 
+
+# uv 
+uv.lock
