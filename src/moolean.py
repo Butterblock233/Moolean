@@ -44,7 +44,7 @@ class Calculator:
 				if right != 0:
 					return left / right
 				else:
-					raise ValueError("Numbers cannot be devided by 0")
+					raise ZeroDivisionError("Numbers cannot be devided by 0")
 			case _:
 				raise ValueError(f"Invalid operator {operator}",operator)
 	def _evaluate(self,node:ParseResults|list|float)->float:
@@ -81,7 +81,10 @@ class Calculator:
 				raise ValueError(f"Invalid operator {operator}")
 	def calculate(self,expression:str = ""):
 		expression_to_parse = expression if expression else self.expression
-		parsed = self._grammar.parse_string(expression_to_parse)
+		try:
+			parsed = self._grammar.parse_string(expression_to_parse,parse_all=True)
+		except Exception as e:
+			print(e)
 		return self._evaluate(parsed)
 
 
