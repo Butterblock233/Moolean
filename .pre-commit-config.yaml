@@ -1,0 +1,13 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: stable  # 使用最新稳定版本
+    hooks:
+      - id: black
+        language_version: python3.10  # 根据你的 Python 版本调整
+        args: [--line-length=88]  # 可选：设置代码行长度
+  - repo: https://github.com/PyCQA/flake8
+    rev: stable
+    hooks:
+      - id: flake8
+        language_version: python3.10
+        
